@@ -1,10 +1,10 @@
 from pyrogram import Client, filters 
-from config import ADMIN, DOWNLOAD_LOCATION
+from config import DOWNLOAD_LOCATION
 import os
 
 dir = os.listdir(DOWNLOAD_LOCATION)
 
-@Client.on_message(filters.private & filters.photo & filters.user(ADMIN))                            
+@Client.on_message(filters.private & filters.photo)                            
 async def set_tumb(bot, msg):       
     if len(dir) == 0:
         await bot.download_media(message=msg.photo.file_id, file_name=f"{DOWNLOAD_LOCATION}/thumbnail.jpg")
@@ -15,7 +15,7 @@ async def set_tumb(bot, msg):
         return await msg.reply(f"Your permanent thumbnail is saved in dictionary ✅️ \nif you change yur server or recreate the server app to again reset your thumbnail⚠️")            
 
 
-@Client.on_message(filters.private & filters.command("view") & filters.user(ADMIN))                            
+@Client.on_message(filters.private & filters.command("view"))                            
 async def view_tumb(bot, msg):
     try:
         await msg.reply_photo(photo=f"{DOWNLOAD_LOCATION}/thumbnail.jpg", caption="this is your current thumbnail")

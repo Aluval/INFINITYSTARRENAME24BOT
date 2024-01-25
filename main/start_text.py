@@ -17,7 +17,7 @@ async def start_cmd(bot, msg):
 
 
 @Client.on_message(filters.command("start") & filters.private)
-async def start_cmd(bot, msg):   
+async def start_cmd(bot, msg, cb=True):   
     txt=f"Hey...! {msg.from_user.mention} i am simple rename bot with personal usage.\nthis bot is made by <b><a href=https://t.me/Sunrises24botupdates>SUNRISES ™</a></b>"                                     
     button= [[
         InlineKeyboardButton("UPDATES 📢", url="https://t.me/Sunrises24botupdates")

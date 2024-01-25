@@ -3,7 +3,7 @@ from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 #from config import ADMIN
  
 
-@Client.on_message(filters.command("start") & filters.private)                             
+"""@Client.on_message(filters.command("start") & filters.private)                             
 async def start_cmd(bot, msg):
     txt="This is personal use bot ✨. Do you want your own Bot Ask To Developer🧑🏻‍💻"
     btn = InlineKeyboardMarkup([[
@@ -13,11 +13,11 @@ async def start_cmd(bot, msg):
     ]])
     if msg.from_user.id:
         return await msg.reply_text(text=txt, reply_markup=btn, disable_web_page_preview = True)
-    await start(bot, msg, cb=False)
+    await start(bot, msg, cb=False)"""
 
 
-@Client.on_callback_query(filters.regex("start"))
-async def start(bot, msg, cb=True):   
+@Client.on_message(filters.command("start") & filters.private)
+async def start_cmd(bot, msg):   
     txt=f"Hey...! {msg.from_user.mention} i am simple rename bot with personal usage.\nthis bot is made by <b><a href=https://t.me/Sunrises24botupdates>SUNRISES ™</a></b>"                                     
     button= [[
         InlineKeyboardButton("UPDATES 📢", url="https://t.me/Sunrises24botupdates")

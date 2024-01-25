@@ -23,7 +23,7 @@ async def view_tumb(bot, msg):
         print(e)
         return await msg.reply_text(text="you don't have any thumbnail")
 
-@Client.on_message(filters.private & filters.command(["del", "del_thumb"]) & filters.user(ADMIN))                            
+@Client.on_message(filters.private & filters.command(["del", "del_thumb"]))                            
 async def del_tumb(bot, msg):
     try:
         os.remove(f"{DOWNLOAD_LOCATION}/thumbnail.jpg")

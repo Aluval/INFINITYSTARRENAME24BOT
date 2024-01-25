@@ -1,9 +1,9 @@
 import time, os
 from pyrogram import Client, filters, enums
-from config import DOWNLOAD_LOCATION, CAPTION, ADMIN
+from config import DOWNLOAD_LOCATION, CAPTION
 from main.utils import progress_message, humanbytes
 
-@Client.on_message(filters.private & filters.command("rename") & filters.user(ADMIN))             
+@Client.on_message(filters.private & filters.command("rename")             
 async def rename_file(bot, msg):
     reply = msg.reply_to_message
     if len(msg.command) < 2 or not reply:

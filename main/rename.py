@@ -1,8 +1,11 @@
+#ALL FILES UPLOADED - CREDITS 🌟 - @Sunrises_24
 import time, os
 from pyrogram import Client, filters, enums
 from config import DOWNLOAD_LOCATION, CAPTION
 from main.utils import progress_message, humanbytes
 
+#ALL FILES UPLOADED - CREDITS 🌟 - @Sunrises_24
+#RENAME
 @Client.on_message(filters.private & filters.command("rename"))            
 async def rename_file(bot, msg):
     reply = msg.reply_to_message
@@ -15,7 +18,7 @@ async def rename_file(bot, msg):
     new_name = msg.text.split(" ", 1)[1]
     sts = await msg.reply_text("Trying to Downloading.....⚡")
     c_time = time.time()
-    downloaded = await reply.download(file_name=new_name, progress=progress_message, progress_args=("Download Started.....", sts, c_time)) 
+    downloaded = await reply.download(file_name=new_name, progress=progress_message, progress_args=("Download Started...⚡️", sts, c_time)) 
     filesize = humanbytes(og_media.file_size)                
     if CAPTION:
         try:
@@ -23,9 +26,9 @@ async def rename_file(bot, msg):
         except Exception as e:            
             return await sts.edit(text=f"Your caption Error unexpected keyword ●> ({e})")           
     else:
-        cap = f"{new_name}\n\n💽 size : {filesize}"
+        cap = f"{new_name}\n\n🌟size : {filesize}"
 
-    # this idea's back end is MKN brain 🧠
+    #ALL FILES UPLOADED - CREDITS 🌟 - @Sunrises_24
 
     dir = os.listdir(DOWNLOAD_LOCATION)
     if len(dir) == 0:

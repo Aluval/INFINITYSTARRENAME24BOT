@@ -1,7 +1,6 @@
-import asyncio, time
+import asyncio
 from pyrogram import Client, filters, enums
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message
-from main.actions import heroku_restart
 #from config import ADMIN
  
 
@@ -70,14 +69,3 @@ async def ping(bot, msg):
     time_taken_s = (end_t - start_t) * 1000
     await rm.edit(f"Pong!📍\n{time_taken_s:.3f} ms")
  
-@Client.on_message(filters.command("restart"))
-async def res(bot, msg):
-    if not f'{msg.sender_id}' == f'{int(AUTH_USERS)}':
-        return await msg.edit("Only authorized user can restart!")
-    result = await heroku_restart()
-    if result is None:
-        await msg.edit("You have not filled `HEROKU_API` and `HEROKU_APP_NAME` vars.")
-    elif result is False:
-        await msg.edit("An error occured!")
-    elif result is True:
-        await msg.edit("Restarting app, wait for a minute.")

@@ -13,5 +13,5 @@ LOG_CHANNEL = int(os.environ.get("LOG_CHANNEL", "-1002112896731"))
 BROADCAST_AS_COPY = bool(os.environ.get("BROADCAST_AS_COPY", "False"))
 
 # for thumbnail ( back end is MrMKN brain 😉)
-#DOWNLOAD_LOCATION = "./DOWNLOADS"
+DOWNLOAD_LOCATION = "./DOWNLOADS"
 

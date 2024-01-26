@@ -39,20 +39,6 @@ class Database:
     async def delete_user(self, user_id):
         await self.col.delete_many({'id': int(user_id)})
 
-    async def set_apply_caption(self, id, apply_caption):
-        await self.col.update_one({'id': id}, {'$set': {'apply_caption': apply_caption}})
-
-    async def get_apply_caption(self, id):
-        user = await self.col.find_one({'id': int(id)})
-        return user.get('apply_caption', True)
-
-    async def set_upload_as_doc(self, id, upload_as_doc):
-        await self.col.update_one({'id': id}, {'$set': {'upload_as_doc': upload_as_doc}})
-
-    async def get_upload_as_doc(self, id):
-        user = await self.col.find_one({'id': int(id)})
-        return user.get('upload_as_doc', False)
-
     async def set_thumbnail(self, id, thumbnail):
         await self.col.update_one({'id': id}, {'$set': {'thumbnail': thumbnail}})
 
@@ -72,4 +58,4 @@ class Database:
         return user or None
 
 
-db = Database(Config.MONGODB_URI, "Rename-Bot")
+db = Database(Config.DB_URL, "Simple-Rename-Bot")

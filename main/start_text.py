@@ -5,7 +5,7 @@ from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message
 
 @Client.on_message(filters.command("start") & filters.private)                             
 async def start_cmd(bot, msg):
-    txt=f"Hey...! {msg.from_user.mention} i am simple rename bot with personal usage.\nthis bot is made by <b><a href=https://t.me/Sunrises24botupdates>SUNRISES ™</a></b>"
+    txt=f"Hey...! {msg.from_user.mention} i am simple rename bot.\nThis bot is made by <b><a href=https://t.me/Sunrises24botupdates>SUNRISES ™</a></b>"
     btn = InlineKeyboardMarkup([[
         InlineKeyboardButton("DEVELOPER 💝", url="https://t.me/Sunrises_24")
         ],[
@@ -18,7 +18,18 @@ async def start_cmd(bot, msg):
         return await msg.reply_text(text=txt, reply_markup=btn, disable_web_page_preview = True)
     await start(bot, msg, cb=False)
 
-
+@Client.on_callback_query(filters.regex("start"))
+async def start(bot, msg):   
+    txt=f"Hey...! {msg.from_user.mention} i am simple rename bot with personal usage.\nthis bot is made by <b><a href=https://t.me/Sunrises24botupdates>SUNRISES ™</a></b>"                                     
+    button= [[
+        InlineKeyboardButton("DEVELOPER 💝", url="https://t.me/Sunrises_24")
+        ],[
+        InlineKeyboardButton("UPDATES 📢", url="https://t.me/Sunrises24botupdates")
+    ],[
+        InlineKeyboardButton("HELP 🌟", callback_data="help"),
+        InlineKeyboardButton("ABOUT 🧑🏻‍💻", callback_data="about") 
+    ]]  
+ 
 """@Client.on_callback_query(filters.regex("start"))
 async def start(bot, msg, cb=True):   
     txt=f"Hey...! {msg.from_user.mention} i am simple rename bot with personal usage.\nthis bot is made by <b><a href=https://t.me/Sunrises24botupdates>SUNRISES ™</a></b>"                                     

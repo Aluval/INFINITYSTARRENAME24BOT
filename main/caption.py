@@ -13,13 +13,15 @@ async def add_caption(bot, msg):
 
 @Client.on_message(filters.private & filters.command('del_caption'))
 async def delete_caption(bot, msg): 
-    caption = find(int(msg.chat.id))[1]
-    if not caption:
-        await msg.reply_text("**yᴏᴜ ᴅᴏɴ'ᴛ ʜᴀᴠᴇ ᴀɴy ᴄᴏꜱᴛᴏᴍ ᴄᴀᴩᴛɪᴏɴ !!**")
+    result = find(int(msg.chat.id))
+    if result is None or not result[1]:
+        await msg.reply_text("**yᴏᴜ ᴅᴏɴ'ᴛ ʜᴀᴠᴇ ᴀɴy ᴄuꜱᴛᴏᴍ ᴄᴀᴩᴛɪᴏɴ !!**")
         return
     delcaption(int(msg.chat.id))
     await msg.reply_text("**yᴏᴜʀ ᴄᴀᴩᴛɪᴏɴ ꜱᴜᴄᴄᴇꜱꜱꜰᴜʟʟy ᴅᴇʟᴇᴛᴇᴅ !!**")
-                                      
+
+
+
 @Client.on_message(filters.private & filters.command('see_caption'))
 async def see_caption(bot, msg): 
     result = find(int(msg.chat.id))
@@ -27,6 +29,6 @@ async def see_caption(bot, msg):
         caption = result[1]
         await msg.reply_text(f"<b><u>Your Caption:</b></u>\n\n`{caption}`")
     else:
-        await msg.reply_text("**yᴏᴜ ᴅᴏɴ'ᴛ ʜᴀᴠᴇ ᴀɴy ᴄᴏꜱᴛᴏᴍ ᴄᴀᴩᴛɪᴏɴ !!**")
+        await msg.reply_text("**yᴏᴜ ᴅᴏɴ'ᴛ ʜᴀᴠᴇ ᴀɴy ᴄusᴛᴏᴍ ᴄᴀᴩᴛɪᴏɴ !!**")
 
           

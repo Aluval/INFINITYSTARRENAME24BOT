@@ -1,6 +1,6 @@
 #Tg: @Sunrises_24
 
-from configs import Config
+from config import LOG_CHANNEL
 from helper.database import db
 from pyrogram import Client
 

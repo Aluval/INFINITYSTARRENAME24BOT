@@ -5,6 +5,8 @@ import motor.motor_asyncio
 from config import DB_URL
 
 
+db = Database(config.DB_URL, "mongodb+srv://RAINBOWRENAME24BOT:RAINBOWRENAME24BOT@cluster0.ud3toaz.mongodb.net/?retryWrites=true&w=majority")
+
 class Database:
     def __init__(self, uri, database_name):
         self._client = motor.motor_asyncio.AsyncIOMotorClient(uri)

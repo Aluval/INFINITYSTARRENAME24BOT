@@ -38,6 +38,3 @@ class Database:
     async def get_user_data(self, id) -> dict:
         user = await self.col.find_one({'id': int(id)})
         return user or None
-
-
-db = Database(config.DB_URL, "Simple-Rename-Bot")

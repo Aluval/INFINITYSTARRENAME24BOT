@@ -33,6 +33,33 @@ async def about_command(bot, msg):
     """
     await msg.reply_text(about_text)
 
+# Function to handle /help command
+@Client.on_message(filters.command("help"))
+async def help_command(bot, msg):
+    help_text = """
+    <b>Hᴇʟʟᴏ Mᴀᴡᴀ ❤️
+Hᴇʀᴇ Is Tʜᴇ Hᴇʟᴘ Fᴏʀ Mʏ Cᴏᴍᴍᴀɴᴅs.
+
+🦋 ʜᴏᴡ ᴛᴏ ᴜꜱᴇ
+◉ Reply To Any Video/File 🖼️
+
+/start - 𝐵𝑜𝑡 𝑎𝑙𝑖𝑣𝑒 𝑜𝑟 𝑁𝑜𝑡 🚶🏻
+/rename - 𝑟𝑒𝑝𝑙𝑎𝑦 𝑤𝑖𝑡ℎ 𝑓𝑖𝑙𝑒 𝑡𝑜 𝑅𝑒𝑛𝑎𝑚𝑒📝
+/help - 𝐺𝑒𝑡 𝑑𝑒𝑡𝑎𝑖𝑙𝑒𝑑 𝑜𝑓 𝑏𝑜𝑡 𝑐𝑜𝑚𝑚𝑎𝑛𝑑𝑠 📝
+/about - 𝐿𝑒𝑎𝑟𝑛 𝑚𝑜𝑟𝑒 𝑎𝑏𝑜𝑢𝑡 𝑡ℎ𝑖𝑠 𝑏𝑜𝑡 🧑🏻‍💻
+ping - 𝑇𝑜 𝐶ℎ𝑒𝑐𝑘 𝑇ℎ𝑒 𝑃𝑖𝑛𝑔 𝑂𝑓 𝑇ℎ𝑒 𝐵𝑜𝑡 📍                   
+/view - 𝑇𝑜  𝑆𝑒𝑒 𝑌𝑜𝑢𝑟 𝐶𝑢𝑠𝑡𝑜𝑚 𝑇ℎ𝑢𝑚𝑏𝑛𝑎𝑖𝑙🖼
+/del - 𝑇𝑜 𝐷𝑒𝑙𝑒𝑡𝑒 𝑌𝑜𝑢𝑟 𝐶𝑢𝑠𝑡𝑜𝑚 𝑇ℎ𝑢𝑚𝑏𝑛𝑎𝑖𝑙🖼
+
+ 💭This bot is rename the files[#2GB].
+ 
+🔱 𝐌𝐚𝐢𝐧𝐭𝐚𝐢𝐧𝐞𝐝 𝐁𝐲 : <a href='https://t.me/Sunrises_24'>𝐒𝐔𝐍𝐑𝐈𝐒𝐄𝐒™</a></b>
+    
+   """
+    await msg.reply_text(help_text)
+
+
+
 #ALL FILES UPLOADED - CREDITS 🌟 - @Sunrises_24
 #FUNCTION CALLBACK HELP
 @Client.on_callback_query(filters.regex("help"))

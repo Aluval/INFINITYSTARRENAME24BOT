@@ -8,12 +8,12 @@ from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message
 async def start_cmd(bot, msg):
     txt=f"Hey...! {msg.from_user.mention} i am simple rename bot.\nThis bot is made by <b><a href=https://t.me/Sunrises24botupdates>SUNRISES ™</a></b>"
     btn = InlineKeyboardMarkup([[
-        InlineKeyboardButton("DEVELOPER 💝", url="https://t.me/Sunrises_24")
+        InlineKeyboardButton("Dᴇᴠᴇʟᴏᴘᴇʀ ❤️", url="https://t.me/Sunrises_24")
         ],[
-        InlineKeyboardButton("UPDATES 📢", url="https://t.me/Sunrises24botupdates")
+        InlineKeyboardButton("Uᴘᴅᴀᴛᴇs 📢", url="https://t.me/Sunrises24botupdates")
     ],[
-        InlineKeyboardButton("HELP 🌟", callback_data="help"),
-        InlineKeyboardButton("ABOUT 🧑🏻‍💻", callback_data="about") 
+        InlineKeyboardButton("Hᴇʟᴘ 🌟", callback_data="help"),
+        InlineKeyboardButton("Aʙᴏᴜᴛ 🧑🏻‍💻", callback_data="about") 
     ]])
     if msg.from_user.id:
         return await msg.reply_text(text=txt, reply_markup=btn, disable_web_page_preview = True)
@@ -35,8 +35,9 @@ async def help(bot, msg):
     txt += "ꜱᴇɴᴅ ᴘʜᴏᴛᴏ ᴛᴏ ꜱᴇᴛ ᴛʜᴜᴍʙɴᴀɪʟ ᴀᴜᴛᴏᴍᴀᴛɪᴄ🌟\n"
     txt += "/ᴠɪᴇᴡ ᴛᴏ ꜱᴇᴇ ʏᴏᴜʀ ᴛʜᴜᴍʙɴᴀɪʟ 👀\n"
     txt += "/ᴅᴇʟ ᴛᴏ ᴅᴇʟᴇᴛᴇ ʏᴏᴜʀ ᴛʜᴜᴍʙɴᴀɪʟ❌"
+    txt += "Jᴏɪɴ : @Sunrises24BotUpdates"
     button= [[        
-        InlineKeyboardButton("🚫 Close", callback_data="del")   
+        InlineKeyboardButton("Cʟᴏꜱᴇ ❌", callback_data="del")   
     ]] 
     await msg.message.edit(text=txt, reply_markup=InlineKeyboardMarkup(button), disable_web_page_preview = True)
 
@@ -45,9 +46,9 @@ async def help(bot, msg):
 async def about(bot, msg):
     me=await bot.get_me()
     Dᴇᴠᴇʟᴏᴘᴇʀ 🧑🏻‍💻=f"<a href=https://t.me/Sunrises_24>SUNRISES™</a>"     
-    txt=f"<b>Bot Name: {me.mention}\nUᴘᴅᴀᴛᴇs 📢: <a href=https://t.me/Sunrises24botupdates>SUNRISES™™</a></b>"                 
+    txt=f"<b>Mʏ Nᴀᴍᴇ: {me.mention}\nUᴘᴅᴀᴛᴇs 📢: <a href=https://t.me/Sunrises24botupdates>SUNRISES™™</a></b>"                 
     button= [[        
-        InlineKeyboardButton("🚫 Close", callback_data="del")       
+        InlineKeyboardButton("Cʟᴏꜱᴇ ❌", callback_data="del")       
     ]]  
     await msg.message.edit(text=txt, reply_markup=InlineKeyboardMarkup(button), disable_web_page_preview = True, parse_mode=enums.ParseMode.HTML)
 

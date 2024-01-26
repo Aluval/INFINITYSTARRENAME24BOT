@@ -7,7 +7,7 @@ BOT_TOKEN = os.environ.get("BOT_TOKEN", "6487202001:AAHCk-mmxZ0wLTMUL4QYTqsXOjDu
 ADMIN = int(os.environ.get("ADMIN", "6469754522"))  
 CAPTION = os.environ.get("CAPTION", "")
 DB_NAME = os.environ.get("DB_NAME","Sunrises_24")     
-DB_URL = os.environ.get("DB_URL","mongodb+srv://RAINBOWRENAME24BOT:<password>@cluster0.ud3toaz.mongodb.net/?retryWrites=true&w=majority")
+DB_URL = os.environ.get("DB_URL","mongodb+srv://RAINBOWRENAME24BOT:RAINBOWRENAME24BOT@cluster0.ud3toaz.mongodb.net/?retryWrites=true&w=majority")
 LOG_CHANNEL = int(os.environ.get("LOG_CHANNEL", "-1002112896731"))
 BROADCAST_AS_COPY = bool(os.environ.get("BROADCAST_AS_COPY", "False"))
 

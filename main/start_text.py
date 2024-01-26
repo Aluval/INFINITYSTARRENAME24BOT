@@ -1,9 +1,11 @@
+#ALL FILES UPLOADED - CREDITS 🌟 - @Sunrises_24
 import asyncio
 from pyrogram import Client, filters, enums
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message
 #from config import ADMIN
- 
-
+  
+#ALL FILES UPLOADED - CREDITS 🌟 - @Sunrises_24
+#START
 @Client.on_message(filters.command("start") & filters.private)                             
 async def start_cmd(bot, msg):
     txt=f"Hᴇʏ {msg.from_user.mention} Mᴀᴡᴀ❤️ ɪ ᴀᴍ Sɪᴍᴘʟᴇ Rᴇɴᴀᴍᴇ 𝟸𝟺 Bᴏᴛ⚡\n Tʜɪꜱ ʙᴏᴛ ɪꜱ ᴍᴀᴅᴇ ʙʏ <b><a href=https://t.me/Sunrises24botupdates>SUNRISES ™💥</a></b>"
@@ -19,6 +21,8 @@ async def start_cmd(bot, msg):
         return await msg.reply_text(text=txt, reply_markup=btn, disable_web_page_preview = True)
     await start(bot, msg, cb=False)
 
+#ALL FILES UPLOADED - CREDITS 🌟 - @Sunrises_24
+#FUNCTION ABOUT HANDLER
 @Client.on_message(filters.command("about"))
 async def about_command(bot, msg):
     about_text = """
@@ -29,6 +33,8 @@ async def about_command(bot, msg):
     """
     await msg.reply_text(about_text)
 
+#ALL FILES UPLOADED - CREDITS 🌟 - @Sunrises_24
+#FUNCTION CALLBACK HELP
 @Client.on_callback_query(filters.regex("help"))
 async def help(bot, msg):
     txt = "Sᴇɴᴅ ᴀ ғɪʟᴇ ᴀɴᴅ /rename <new name> ᴡɪᴛʜ ʀᴇᴘʟᴀʏᴇᴅ ʏᴏᴜʀ ғɪʟᴇ\n\n"
@@ -41,7 +47,8 @@ async def help(bot, msg):
     ]] 
     await msg.message.edit(text=txt, reply_markup=InlineKeyboardMarkup(button), disable_web_page_preview = True)
 
-
+#ALL FILES UPLOADED - CREDITS 🌟 - @Sunrises_24
+#FUNCTION CALL BACK ABOUT
 @Client.on_callback_query(filters.regex("about"))
 async def about(bot, msg):
     me=await bot.get_me()
@@ -52,7 +59,7 @@ async def about(bot, msg):
     ]]  
     await msg.message.edit(text=txt, reply_markup=InlineKeyboardMarkup(button), disable_web_page_preview = True, parse_mode=enums.ParseMode.HTML)
 
-
+#ALL FILES UPLOADED - CREDITS 🌟 - @Sunrises_24
 @Client.on_callback_query(filters.regex("del"))
 async def closed(bot, msg):
     try:

@@ -80,10 +80,10 @@ async def closed(bot, msg):
 
 #ALL FILES UPLOADED - CREDITS 🌟 - @Sunrises_24
 #Ping
-@app.on_message(filters.command("ping"))
-async def ping(client, message):
+@Client.on_message(filters.command("ping"))
+async def ping(bot, msg):
     start_t = time.time()
-    rm = await message.reply_text("Checking")
+    rm = await msg.reply_text("Checking")
     end_t = time.time()
     time_taken_s = (end_t - start_t) * 1000
     await rm.edit(f"Pong!📍\n{time_taken_s:.3f} ms")

@@ -18,9 +18,9 @@ async def start_cmd(bot, msg):
         return await msg.reply_text(text=txt, reply_markup=btn, disable_web_page_preview = True)
     await start(bot, msg, cb=False)
 
-@Client.on_callback_query(filters.regex("start"))
-async def start(bot, msg):   
-    txt=f"Hey...! {msg.from_user.mention} i am simple rename bot with personal usage.\nthis bot is made by <b><a href=https://t.me/Sunrises24botupdates>SUNRISES ™</a></b>"                                     
+@Client.on_callback_query(filters.regex("back"))
+async def back(bot, msg):   
+    txt=f"Hey...! {msg.from_user.mention} i am simple rename bot.\nThis bot is made by <b><a href=https://t.me/Sunrises24botupdates>SUNRISES ™</a></b>"                                     
     button= [[
         InlineKeyboardButton("DEVELOPER 💝", url="https://t.me/Sunrises_24")
         ],[
@@ -53,7 +53,7 @@ async def help(bot, msg):
     txt += "/del to delete your thumbnail"
     button= [[        
         InlineKeyboardButton("🚫 Close", callback_data="del"),
-        InlineKeyboardButton("⬅️ Back", callback_data="start") 
+        InlineKeyboardButton("⬅️ Back", callback_data="back") 
     ]]  
     await msg.message.edit(text=txt, reply_markup=InlineKeyboardMarkup(button), disable_web_page_preview = True)
 
@@ -65,7 +65,7 @@ async def about(bot, msg):
     txt=f"<b>Bot Name: {me.mention}\nDeveloper: <a href=https://t.me/Sunrises_24>Harsha 24</a>\nUPDATES 📢: <a href=https://t.me/Sunrises24botupdates>SUNRISES™™</a></b>"                 
     button= [[        
         InlineKeyboardButton("🚫 Close", callback_data="del"),
-        InlineKeyboardButton("⬅️ Back", callback_data="start") 
+        InlineKeyboardButton("⬅️ Back", callback_data="back") 
     ]]  
     await msg.message.edit(text=txt, reply_markup=InlineKeyboardMarkup(button), disable_web_page_preview = True, parse_mode=enums.ParseMode.HTML)
 

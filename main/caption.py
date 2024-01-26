@@ -8,7 +8,7 @@ async def add_caption(bot, msg):
     if len(msg.command) == 1:
        return await msg.reply_text("**Give me a caption to set.\n\nExample:- `/set_caption {filename}`**")
     caption = msg.text.split(" ", 1)[1]
-    await add_caption(int(msg.chat.id), caption)
+    add_caption(int(msg.chat.id), caption)
     await msg.reply_text("**yᴏᴜʀ ᴄᴀᴩᴛɪᴏɴ ꜱᴜᴄᴄᴇꜱꜱꜰᴜʟʟy ᴀᴅᴅᴇᴅ !!**")
 
 """@Client.on_message(filters.private & filters.command('del_caption'))

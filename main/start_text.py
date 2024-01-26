@@ -19,7 +19,7 @@ async def start_cmd(bot, msg):
         return await msg.reply_text(text=txt, reply_markup=btn, disable_web_page_preview = True)
     await start(bot, msg, cb=False)
 
-@app.on_message(filters.command("about"))
+@Client.on_message(filters.command("about"))
 async def about_command(bot, msg):
     about_text = """
 <b>✯ Mʏ Nᴀᴍᴇ : {me.mention} </b>

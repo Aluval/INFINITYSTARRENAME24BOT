@@ -12,10 +12,10 @@ async def start_cmd(bot, msg):
         [[InlineKeyboardButton("DEVELOPER 💝", url="https://t.me/Sunrises_24")
         ],[
         InlineKeyboardButton("UPDATES 📢", url="https://t.me/Sunrises24botupdates")
-    ],[
+        ],[
         InlineKeyboardButton("HELP 🌟", callback_data="help"),
         InlineKeyboardButton("ABOUT 🧑🏻‍💻", callback_data="about") 
-    ]]))
+        ]]))
     if msg.from_user.id:
         return await msg.reply_text(text=txt, reply_markup=InlineKeyboardMarkup, disable_web_page_preview = True)
     await start(bot, msg, cb=False)

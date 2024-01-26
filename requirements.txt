@@ -1,3 +1,4 @@
 pyrogram
 Tgcrypto
- 
+python-decouple
+heroku3

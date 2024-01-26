@@ -40,4 +40,4 @@ class Database:
         return user or None
 
 
-db = Database(Config.DB_URL, "Simple-Rename-Bot")
+db = Database(config.DB_URL, "Simple-Rename-Bot")

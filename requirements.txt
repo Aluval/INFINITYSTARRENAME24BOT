@@ -1,4 +1,6 @@
+pymongo==4.5.0
 pyrogram
 Tgcrypto
 python-decouple
 heroku3
+mongo

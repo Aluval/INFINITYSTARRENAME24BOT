@@ -45,7 +45,7 @@ async def help(bot, msg):
 @Client.on_callback_query(filters.regex("about"))
 async def about(bot, msg):
     me=await bot.get_me()
-    Dᴇᴠᴇʟᴏᴘᴇʀ 🧑🏻‍💻=f"<a href=https://t.me/Sunrises_24>SUNRISES™</a>"     
+    Dᴇᴠᴇʟᴏᴘᴇʀ =f"<a href=https://t.me/Sunrises_24>SUNRISES™</a>"     
     txt=f"<b>Mʏ Nᴀᴍᴇ: {me.mention}\nUᴘᴅᴀᴛᴇs 📢: <a href=https://t.me/Sunrises24botupdates>SUNRISES™™</a></b>"                 
     button= [[        
         InlineKeyboardButton("Cʟᴏꜱᴇ ❌", callback_data="del")       

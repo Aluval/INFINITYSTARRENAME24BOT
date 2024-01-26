@@ -6,7 +6,7 @@ from pyrogram import filters, enums, Client
 from pyrogram.types import (
     Message
 )
-from configs import Config
+from config import ADMIN 
 from helper.database import db
 from main.utils import humanbytes
 from main.handlers import broadcast_handler

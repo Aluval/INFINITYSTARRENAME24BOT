@@ -1,3 +1,4 @@
+#ALL FILES UPLOADED - CREDITS 🌟 - @Sunrises_24
 from pyrogram.types import *
 import math
 import os
@@ -5,6 +6,7 @@ import time
 
 PROGRESS_BAR = "\n\n📁 : {b} | {c}\n🚀 : {a}%\n⚡ : {d}/s\n⏱️ : {f}"
 
+#ALL FILES UPLOADED - CREDITS 🌟 - @Sunrises_24
 async def progress_message(current, total, ud_type, message, start):
     now = time.time()
     diff = now - start
@@ -31,7 +33,7 @@ async def progress_message(current, total, ud_type, message, start):
         except:
             pass
 
-
+#ALL FILES UPLOADED - CREDITS 🌟 - @Sunrises_24
 def humanbytes(size):
     units = ["Bytes", "KB", "MB", "GB", "TB", "PB", "EB"]
     size = float(size)
@@ -41,7 +43,7 @@ def humanbytes(size):
         size /= 1024.0
     return "%.2f %s" % (size, units[i])
 
-
+#ALL FILES UPLOADED - CREDITS 🌟 - @Sunrises_24
 def TimeFormatter(milliseconds: int) -> str:
     seconds, milliseconds = divmod(int(milliseconds), 1000)
     minutes, seconds = divmod(seconds, 60)
@@ -55,4 +57,4 @@ def TimeFormatter(milliseconds: int) -> str:
     return tmp[:-2]
 
 
-
+#ALL FILES UPLOADED - CREDITS 🌟 - @Sunrises_24

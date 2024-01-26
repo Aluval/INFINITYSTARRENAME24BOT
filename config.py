@@ -7,9 +7,6 @@ BOT_TOKEN = os.environ.get("BOT_TOKEN", "6487202001:AAHCk-mmxZ0wLTMUL4QYTqsXOjDu
 ADMIN = int(os.environ.get("ADMIN", "6469754522"))  
 SUDO_USERS = os.environ.get("SUDO_USERS", "6469754522, 6621835067")
 CAPTION = os.environ.get("CAPTION", "")
-AUTH_USERS = int(os.environ.get("AUTH_USERS", "6469754522"))
-HEROKU_API = os.environ.get("HEROKU_API", "7b47e8fc-fc54-4344-b15a-b3c7a119f763")
-HEROKU_APP_NAME = os.environ.get("HEROKU_APP_NAME", "vast-tundra-32655")
 DB_NAME = os.environ.get("DB_NAME","Sunrises_24")     
 DB_URL = os.environ.get("DB_URL","mongodb+srv://RAINBOWRENAME24BOT:<password>@cluster0.ud3toaz.mongodb.net/?retryWrites=true&w=majority")
 

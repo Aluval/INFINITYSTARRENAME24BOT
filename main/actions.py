@@ -2,7 +2,7 @@
 #@sunrises_24
 
 import heroku3 
-from .. import AUTH_USERS
+from config import AUTH_USERS
 from decouple import config
     
 #Heroku--------------------------------------------------------------------------------------------------------------

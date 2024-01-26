@@ -1,11 +1,5 @@
-pymongo==4.5.0
+
 pyrogram
 Tgcrypto
-python-decouple
-mongo
-dnspython
-motor
-Pillow
-hachoir
-psutil
-aiofiles
+
+

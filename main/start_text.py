@@ -31,10 +31,10 @@ async def about_command(bot, msg):
 
 @Client.on_callback_query(filters.regex("help"))
 async def help(bot, msg):
-    txt = "just send a file and /rename <new name> with replayed your file\n\n"
-    txt += "send photo to set thumbnail automatic \n"
-    txt += "/view to see your thumbnail \n"
-    txt += "/del to delete your thumbnail"
+    txt = "Sᴇɴᴅ ᴀ ғɪʟᴇ ᴀɴᴅ /ʀᴇɴᴀᴍᴇ <ɴᴇᴡ ɴᴀᴍᴇ> ᴡɪᴛʜ ʀᴇᴘʟᴀʏᴇᴅ ʏᴏᴜʀ ғɪʟᴇ\n\n"
+    txt += "ꜱᴇɴᴅ ᴘʜᴏᴛᴏ ᴛᴏ ꜱᴇᴛ ᴛʜᴜᴍʙɴᴀɪʟ ᴀᴜᴛᴏᴍᴀᴛɪᴄ🌟\n"
+    txt += "/ᴠɪᴇᴡ ᴛᴏ ꜱᴇᴇ ʏᴏᴜʀ ᴛʜᴜᴍʙɴᴀɪʟ 👀\n"
+    txt += "/ᴅᴇʟ ᴛᴏ ᴅᴇʟᴇᴛᴇ ʏᴏᴜʀ ᴛʜᴜᴍʙɴᴀɪʟ❌"
     button= [[        
         InlineKeyboardButton("🚫 Close", callback_data="del")   
     ]] 
@@ -44,8 +44,8 @@ async def help(bot, msg):
 @Client.on_callback_query(filters.regex("about"))
 async def about(bot, msg):
     me=await bot.get_me()
-    Master=f"<a href=https://t.me/Sunrises_24>SUNRISES™</a>"     
-    txt=f"<b>Bot Name: {me.mention}\nDᴇᴠᴇʟᴏᴘᴇʀ 🧑🏻‍💻: <a href=https://t.me/Sunrises_24>Harsha 24</a>\nUPDATES 📢: <a href=https://t.me/Sunrises24botupdates>SUNRISES™™</a></b>"                 
+    Dᴇᴠᴇʟᴏᴘᴇʀ 🧑🏻‍💻=f"<a href=https://t.me/Sunrises_24>SUNRISES™</a>"     
+    txt=f"<b>Bot Name: {me.mention}\nUᴘᴅᴀᴛᴇs 📢: <a href=https://t.me/Sunrises24botupdates>SUNRISES™™</a></b>"                 
     button= [[        
         InlineKeyboardButton("🚫 Close", callback_data="del")       
     ]]  

@@ -1,34 +1,45 @@
 from pyrogram import Client, filters 
-from config import DOWNLOAD_LOCATION
 import os
-
-dir = os.listdir(DOWNLOAD_LOCATION)
-
-@Client.on_message(filters.private & filters.photo)                            
-async def set_tumb(bot, msg):       
-    if len(dir) == 0:
-        await bot.download_media(message=msg.photo.file_id, file_name=f"{DOWNLOAD_LOCATION}/thumbnail.jpg")
-        return await msg.reply(f"Your permanent thumbnail is saved in dictionary ✅️ \nif you change yur server or recreate the server app to again reset your thumbnail⚠️")            
-    else:    
-        os.remove(f"{DOWNLOAD_LOCATION}/thumbnail.jpg")
-        await bot.download_media(message=msg.photo.file_id, file_name=f"{DOWNLOAD_LOCATION}/thumbnail.jpg")               
-        return await msg.reply(f"Your permanent thumbnail is saved in dictionary ✅️ \nif you change yur server or recreate the server app to again reset your thumbnail⚠️")            
+from helper.database import db
+from helper.add import add_user_to_database
 
 
-@Client.on_message(filters.private & filters.command("view"))                            
-async def view_tumb(bot, msg):
-    try:
-        await msg.reply_photo(photo=f"{DOWNLOAD_LOCATION}/thumbnail.jpg", caption="this is your current thumbnail")
-    except Exception as e:
-        print(e)
-        return await msg.reply_text(text="you don't have any thumbnail")
+@Client.on_message(filters.command("show_thumbnail") & filters.private)
+async def show_thumbnail(bot, msg):
+    if not m.from_user:
+        return await m.reply_text("I don't know about you sar :(")
+    await add_user_to_database(c, m)
+    thumbnail = await db.get_thumbnail(m.from_user.id)
+    if not thumbnail:
+        return await m.reply_text("You didn't set custom thumbnail!")
+    await c.send_photo(m.chat.id, thumbnail, caption="Custom Thumbnail",
+                       reply_markup=types.InlineKeyboardMarkup(
+                           [[types.InlineKeyboardButton("Delete Thumbnail",
+                                                        callback_data="deleteThumbnail")]]
+                       ))
 
-@Client.on_message(filters.private & filters.command(["del", "del_thumb"]))                            
-async def del_tumb(bot, msg):
-    try:
-        os.remove(f"{DOWNLOAD_LOCATION}/thumbnail.jpg")
-        await msg.reply_text("your thumbnail was removed🚫")
-    except Exception as e:
-        print(e)
-        return await msg.reply_text(text="you don't have any thumbnail")
-    
+
+@Client.on_message(filters.command("set_thumbnail") & filters.private)
+async def set_thumbnail(bot, msg):
+    if (not m.reply_to_message) or (not m.reply_to_message.photo):
+        return await m.reply_text("Reply to any image to save in as custom thumbnail!")
+    if not m.from_user:
+        return await m.reply_text("I don't know about you sar :(")
+    await add_user_to_database(c, m)
+    await db.set_thumbnail(m.from_user.id, m.reply_to_message.photo.file_id)
+    await m.reply_text("Okay,\n"
+                       "I will use this image as custom thumbnail.",
+                       reply_markup=types.InlineKeyboardMarkup(
+                           [[types.InlineKeyboardButton("Delete Thumbnail",
+                                                        callback_data="deleteThumbnail")]]
+                       ))
+
+
+@Client.on_message(filters.command("delete_thumbnail") & filters.private)
+async def delete_thumbnail(bot, msg):
+    if not m.from_user:
+        return await m.reply_text("I don't know about you sar :(")
+    await add_user_to_database(c, m)
+    await db.set_thumbnail(m.from_user.id, None)
+    await m.reply_text("Okay,\n"
+                       "I deleted custom thumbnail from my database.")

@@ -22,7 +22,7 @@ async def delete_caption(bot, msg):
 
 @Client.on_message(filters.private & filters.command('see_caption'))
 async def see_caption(bot, msg): 
-    caption = find(int(message.chat.id))[1]
+    caption = find(int(msg.chat.id))[1]
     if caption:
         await msg.reply_text(f"<b><u>Your Caption:</b></u>\n\n`{caption}`")
     else:

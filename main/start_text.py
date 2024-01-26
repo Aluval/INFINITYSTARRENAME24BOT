@@ -6,7 +6,7 @@ from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message
 
 @Client.on_message(filters.command("start") & filters.private)                             
 async def start_cmd(bot, msg):
-    txt=f"Hey...! {msg.from_user.mention} i am simple rename bot.\nThis bot is made by <b><a href=https://t.me/Sunrises24botupdates>SUNRISES ™</a></b>"
+    txt=f"Hᴇʏ {msg.from_user.mention} Mᴀᴡᴀ❤️.ɪ ᴀᴍ Sɪᴍᴘʟᴇ Rᴇɴᴀᴍᴇ 𝟸𝟺 Bᴏᴛ⚡.\n Tʜɪꜱ ʙᴏᴛ ɪꜱ ᴍᴀᴅᴇ ʙʏ<b><a href=https://t.me/Sunrises24botupdates>SUNRISES ™💥</a></b>"
     btn = InlineKeyboardMarkup([[
         InlineKeyboardButton("Dᴇᴠᴇʟᴏᴘᴇʀ ❤️", url="https://t.me/Sunrises_24")
         ],[

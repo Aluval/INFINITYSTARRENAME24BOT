@@ -5,6 +5,7 @@ from config import *
 mongo = pymongo.MongoClient(DB_URL)
 
 db = mongo[DB_NAME]
+dbcol = db["user"]
 
 #def addthumb(chat_id, file_id):
     #dbcol.update_one({"_id": chat_id}, {"$set": {"file_id": file_id}})
@@ -15,7 +16,7 @@ db = mongo[DB_NAME]
 
 
 def addcaption(chat_id, caption):
-    dbcol.update_one({"_id": chat_id}, {"$set": {"caption": caption}})
+    dbcol.update({"_id": chat_id}, {"$set": {"caption": caption}})
 
 def delcaption(chat_id):
     dbcol.update({"_id": chat_id}, {"$set": {"caption": None}})

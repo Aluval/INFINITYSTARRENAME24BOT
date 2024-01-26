@@ -1,36 +1,47 @@
-# Simple-Rename-Bot 
+![Typing SVG](https://readme-typing-svg.herokuapp.com/?lines=𝐖𝐄𝐋𝐂𝐎𝐌𝐄+𝐓𝐎+🦋𝐏𝐇𝐎𝐓𝐎+𝐄𝐍𝐂𝐇𝐀𝐍𝐂𝐄𝐑+𝟐𝟒+𝐁𝐎𝐓🦋!;𝗖𝗥𝗘𝗔𝗧𝗘𝗗+𝗕𝗬+𝗧𝗘𝗔𝗠+𝐒𝐔𝐍𝐑𝐈𝐒𝐄𝐒+𝐇𝐀𝐑𝐒𝐇𝐀+𝟐𝟒✨!;🦋+𝐏𝐇𝐎𝐓𝐎+𝐄𝐍𝐂𝐇𝐀𝐍𝐂𝐄𝐑+𝟐𝟒+𝐁𝐎𝐓!)</p>
+<img src="https://telegra.ph/file/d71113c68302b575f44af.jpg" alt="logo" target="/blank">
 
-📝 Simple & High Speed Telegram File Rename Bot For only personal use 
+<h1 align="center">
+ <b><a href="https://telegram.me/INFINITYSTARRENAME24BOT" target="/blank">🦋 𝐏𝐇𝐎𝐓𝐎 𝐄𝐍𝐂𝐇𝐀𝐍𝐂𝐄𝐑 𝟐𝟒 𝐁𝐎𝐓 🦋</a> 
+</h1>
 
+<p align="center">🌟 𝙋𝙐𝘽𝙇𝙄𝘾 𝙍𝙀𝙋𝙊 🌟</p>
 
-## How To Deploy
+## Deploy to Heroku
 
-<a href="https://youtu.be/oc847WvOUaI"><img src="https://img.shields.io/badge/Watch%20Tutorial%20On%20YouTube-red.svg?logo=Youtube"></a>                     
+Press Below Button to Deploy!
 
-## Deployment Support
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Aluval/INFINITYSTARRENAME24BOT)
 
+###  **𝑅𝐸𝑄𝑈𝐼𝑅𝐸𝐷 𝑉𝐴𝑅𝐼𝐴𝐵𝐿𝐸𝑆** 
 
-## Deploy to Koyeb
+* `BOT_TOKEN`  - Get bot token from @BotFather
 
-⚠️ personal use & 1 process at a time 
+* `API_ID` - From my.telegram.org 
 
-[![Deploy to Koyeb](https://www.koyeb.com/static/images/deploy/button.svg)](https://app.koyeb.com/deploy?type=git&repository=github.com/MrMKN/Simple-Rename-Bot&env[BOT_TOKEN]&env[API_ID]&env[API_HASH]&env[ADMIN]&env[CAPTION]&env[THUMBNAIL]&run_command=python%20bot.py&branch=main&name=renamer)              
+* `API_HASH` - From my.telegram.org
 
-### Heroku
+* `RemoveBG_API` - From https://www.remove.bg/dashboard#api-key
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/MrMKN/Simple-Rename-Bot)
+### Bot Commands
+ ```
+start - 𝐵𝑜𝑡 𝑎𝑙𝑖𝑣𝑒 𝑜𝑟 𝑁𝑜𝑡 🚶🏻
+about - 𝐿𝑒𝑎𝑟𝑛 𝑚𝑜𝑟𝑒 𝑎𝑏𝑜𝑢𝑡 𝑡ℎ𝑖𝑠 𝑏𝑜𝑡 🧑🏻‍💻
+rename - 𝑟𝑒𝑝𝑙𝑎𝑦 𝑤𝑖𝑡ℎ 𝑓𝑖𝑙𝑒 𝑡𝑜 𝑅𝑒𝑛𝑎𝑚𝑒📝
+view - 𝑇𝑜  𝑆𝑒𝑒 𝑌𝑜𝑢𝑟 𝐶𝑢𝑠𝑡𝑜𝑚 𝑇ℎ𝑢𝑚𝑏𝑛𝑎𝑖𝑙🖼️
+del - 𝑇𝑜 𝐷𝑒𝑙𝑒𝑡𝑒 𝑌𝑜𝑢𝑟 𝐶𝑢𝑠𝑡𝑜𝑚 𝑇ℎ𝑢𝑚𝑏𝑛𝑎𝑖𝑙🖼️
 
-## BotFather Command
-```
-start - get start the bot
-rename - replay with file to rename
-del - to delete your thumbnail 
-view - view current thumbnail 
-```
+ ```
 
+### 🔗 𝐂𝐨𝐧𝐭𝐚𝐜𝐭 𝐔𝐬
+- [ ᴏᴡɴᴇʀ ᴏꜰ ᴛʜɪꜱ ʀᴇᴩᴏ](https://telegram.me/Sunrises_24)
+- [ᴄʜᴀɴɴᴇʟ](https://telegram.me/sunriseseditsoffical6)
+- [ᴜᴘᴅᴀᴛᴇs](https://telegram.me/Sunrises24BotUpdates)
 
-## Support
+### Copyright ©️ [𝗦ᴜɴʀɪ𝘀ᴇ𝘀 𝗛ᴀʀ𝘀ʜᴀ 𝟸𝟺 🇮🇳 ᵀᴱᴸ](https://telegram.me/Sunrises_24)
 
-● [BOT UPDATES](https://t.me/mkn_bots_updates)
+<b>Selling This Repo For Money Is Strictly Prohibited 🚫</b>
 
-● [SUPPORT GROUP](https://t.me/mkn_botz_discussion_group)
+#### THANK YOU ALL FOR THE SUPPORT 💫
+#### 𝗧𝗛𝗔𝗡𝗞𝗦 𝗧𝗢 𝗠𝗬 𝗧𝗘𝗟𝗨𝗚𝗨 𝗔𝗗𝗠𝗜𝗡𝗦 𝗙𝗢𝗥 𝗦𝗨𝗣𝗣𝗢𝗥𝗧 ❤️
+

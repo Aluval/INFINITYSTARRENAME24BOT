@@ -28,7 +28,7 @@ async def about_command(bot, msg):
 <b>✯ Uᴘᴅᴀᴛᴇs 📢 : <a href=https://t.me/Sunrises24BotUpdates>𝐔𝐏𝐃𝐀𝐓𝐄𝐒 📢</a></b>
 <b>✯ Bᴜɪʟᴅ Sᴛᴀᴛᴜs 📊 : ᴠ2 [Sᴛᴀʙʟᴇ]</b>
     """
-    await message.reply_text(about_text)
+    await msg.reply_text(about_text)
 
 @Client.on_callback_query(filters.regex("help"))
 async def help(bot, msg):

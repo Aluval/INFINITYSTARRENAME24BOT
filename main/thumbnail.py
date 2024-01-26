@@ -34,4 +34,6 @@ async def del_tumb(bot, msg):
     except Exception as e:
         print(e)
         return await msg.reply_text(text="you don't have any thumbnail‼️")
+
+#ALL FILES UPLOADED - CREDITS 🌟 - @Sunrises_24
     

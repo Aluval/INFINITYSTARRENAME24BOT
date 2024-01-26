@@ -1,14 +1,15 @@
 import asyncio, time
 from pyrogram import Client, filters, enums
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message
-#from config import ADMIN
+from config import SUNRISES_PIC
  
 
 @Client.on_message(filters.command("start") & filters.private)                             
 async def start_cmd(bot, msg):
     txt=f"Hey...! {msg.from_user.mention} i am simple rename bot.\nThis bot is made by <b><a href=https://t.me/Sunrises24botupdates>SUNRISES ™</a></b>"
-    btn = InlineKeyboardMarkup([[
-        InlineKeyboardButton("DEVELOPER 💝", url="https://t.me/Sunrises_24")
+    SUNRISES_PIC:
+           await message.reply_photo(photo=SUNRISES_PIC, InlineKeyboardMarkup(             
+        [[InlineKeyboardButton("DEVELOPER 💝", url="https://t.me/Sunrises_24")
         ],[
         InlineKeyboardButton("UPDATES 📢", url="https://t.me/Sunrises24botupdates")
     ],[
@@ -16,7 +17,7 @@ async def start_cmd(bot, msg):
         InlineKeyboardButton("ABOUT 🧑🏻‍💻", callback_data="about") 
     ]])
     if msg.from_user.id:
-        return await msg.reply_text(text=txt, reply_markup=btn, disable_web_page_preview = True)
+        return await msg.reply_text(text=txt, reply_markup=InlineKeyboardMarkup, disable_web_page_preview = True)
     await start(bot, msg, cb=False)
 
 @Client.on_message(filters.command("about"))

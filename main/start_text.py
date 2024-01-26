@@ -7,7 +7,7 @@ from config import SUNRISES_PIC
 @Client.on_message(filters.command("start") & filters.private)                             
 async def start_cmd(bot, msg):
     txt=f"Hey...! {msg.from_user.mention} i am simple rename bot.\nThis bot is made by <b><a href=https://t.me/Sunrises24botupdates>SUNRISES ™</a></b>"
-    SUNRISES_PIC:
+     if SUNRISES_PIC:
            await message.reply_photo(photo=SUNRISES_PIC, InlineKeyboardMarkup(             
         [[InlineKeyboardButton("DEVELOPER 💝", url="https://t.me/Sunrises_24")
         ],[

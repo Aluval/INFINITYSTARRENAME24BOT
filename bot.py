@@ -1,3 +1,5 @@
+#SUNRISES24BOTS
+#TG:@SUNRISES_24
 from pyrogram import Client
 from config import *
 import os
@@ -8,7 +10,7 @@ class Bot(Client):
 
     def __init__(self):
         super().__init__(
-            name="simple-renamer",
+            name="INFINITYSTARRENAME24BOT",
             api_id=API_ID,
             api_hash=API_HASH,
             bot_token=BOT_TOKEN,

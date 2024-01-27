@@ -1,8 +1,8 @@
 { 
     "name": "INFINITYSTARRENAME24BOT", 
-    "description": "A SIMPLE RENAME BOT WITH THUMBNAIL,CAPTION & HIGH SPEED ⚡️", 
-    "repository": "https://github.com/Aluval/INFINITYSTARRENAME24BOT",   
+    "description": "A SIMPLE RENAME BOT WITH THUMBNAIL,CAPTION & HIGH SPEED ⚡️",
     "logo":"https://telegra.ph/file/9ab6d71f68a43dd426a11.jpg",
+    "repository": "https://github.com/Aluval/INFINITYSTARRENAME24BOT",   
     "keywords": ["Rename-bot", "Telegram", "INFINITY 24 BOT"], 
     "env": { 
         "BOT_TOKEN": { 

@@ -1,20 +1,36 @@
-{
-  "name": "INFINITYSTARRENAME24BOT",
-  "description": "A SIMPLE RENAME BOT WITH THUMBNAIL,CAPTION & HIGH SPEED ⚡️",                  
-  "keywords": ["Rename-bot", "Telegram", "INFINITY"],
-  "logo": "https://telegra.ph/file/911b6a5a560ed7abd19d3.jpg",
-  "repository": "https://github.com/Aluval/INFINITYSTARRENAME24BOT",
-  "env": {
-    "API_ID": {"description": "Get this value from https://my.telegram.org", "required": true},
-    "API_HASH": {"description": "Get this value from https://my.telegram.org", "required": true},                              
-    "BOT_TOKEN": {"description": "Your bot token. Get this value from https://t.me/BotFather", "required": true},
-    "ADMIN": {"description": "your telegram id. because this bot repo is admin only", "required": true},
-    "CAPTION": {"description": "your permanent caption, "required": false}                         
-  }, 
-  "addons": [ ],
-  "buildpacks": [{"url": "heroku/python"}]
+{ 
+    "name": "INFINITYSTARRENAME24BOT", 
+    "description": "A SIMPLE RENAME BOT WITH THUMBNAIL,CAPTION & HIGH SPEED ⚡️", 
+    "repository": "https://github.com/Aluval/INFINITYSTARRENAME24BOT", 
+    "keywords": ["Rename-bot", "Telegram", "INFINITY 24 BOT"], 
+    "env": { 
+        "BOT_TOKEN": { 
+            "description": "Your Bot token from @Botfather", 
+            "required": true 
+        }, 
+        "API_ID": { 
+            "description": "Your API_ID from https://my.telegram.org/apps", 
+            "required": true 
+        }, 
+        "API_HASH": { 
+            "description": "Your API_HASH from https://my.telegram.org/apps", 
+            "required": true 
+        }, 
+        "ADMIN": { 
+            "description": "Your telegram ID,Run the Bot", 
+            "required": true 
+        }, 
+        "CAPTION": { 
+            "description": "your permanent caption", 
+            "required": false 
+        }  
+    }, 
+    "buildpacks": [ 
+        { 
+            "url": "heroku/python" 
+        } 
+    ] 
 }
-
 
 
 

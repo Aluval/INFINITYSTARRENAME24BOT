@@ -16,7 +16,7 @@ async def start(bot, msg):
     if FSUB_CHANNEL:
         try:
             # Check if the user is banned
-            user = await client.get_chat_member(FSUB_CHANNEL, message.chat.id)
+            user = await Client.get_chat_member(FSUB_CHANNEL, message.chat.id)
             if user.status == "kicked":
                 await message.reply_text("Sᴏʀʀʏ, Yᴏᴜ ᴀʀᴇ **B ᴀ ɴ ɴ ᴇ ᴅ**")
                 return

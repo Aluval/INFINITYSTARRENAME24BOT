@@ -34,15 +34,18 @@ async def start(bot, msg):
             start_text = START_TEXT.format(message.from_user.first_name) if hasattr(message, "message_id") else START_TEXT
             await message.reply_text(
                 text=start_text,
-                reply_markup=InlineKeyboardMarkup([[
-        InlineKeyboardButton("Dᴇᴠᴇʟᴏᴘᴇʀ ❤️", url="https://t.me/Sunrises_24")
-        ],[
-        InlineKeyboardButton("Uᴘᴅᴀᴛᴇs 📢", url="https://t.me/Sunrises24botupdates")
-    ],[
-        InlineKeyboardButton("Hᴇʟᴘ 🌟", callback_data="help"),
-        InlineKeyboardButton("Aʙᴏᴜᴛ 🧑🏻‍💻", callback_data="about") 
-    ]])
-            return
+                reply_markup=InlineKeyboardMarkup([
+                    [InlineKeyboardButton("Dᴇᴠᴇʟᴏᴘᴇʀ ❤️", url="https://t.me/Sunrises_24")
+                    ],[
+                    InlineKeyboardButton("Uᴘᴅᴀᴛᴇs 📢", url="https://t.me/Sunrises24botupdates")
+                    ],[
+                    InlineKeyboardButton("Hᴇʟᴘ 🌟", callback_data="help"),
+                    InlineKeyboardButton("Aʙᴏᴜᴛ 🧑🏻‍💻", callback_data="about") 
+                    ]]
+                ),
+                reply_to_message_id=getattr(message, "message_id", None)
+            )
+            return            
 
 #ALL FILES UPLOADED - CREDITS 🌟 - @Sunrises_24
 #FUNCTION ABOUT HANDLER

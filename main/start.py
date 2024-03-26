@@ -10,7 +10,7 @@ Hᴇʟʟᴏ Mᴀᴡᴀ ❤️ ɪ ᴀᴍ Sɪᴍᴘʟᴇ Rᴇɴᴀᴍᴇ 𝟸𝟺 
 """
 
 #ALL FILES UPLOADED - CREDITS 🌟 - @Sunrises_24
-#START
+#START HANDLER 
 @Client.on_message(filters.command("start") & filters.private)
 async def start(bot, msg: Message):       
     if FSUB_CHANNEL:

@@ -12,11 +12,11 @@ Hᴇʟʟᴏ Mᴀᴡᴀ ❤️ ɪ ᴀᴍ Sɪᴍᴘʟᴇ Rᴇɴᴀᴍᴇ 𝟸𝟺 
 #ALL FILES UPLOADED - CREDITS 🌟 - @Sunrises_24
 #START
 @Client.on_message(filters.command("start") & filters.private)
-async def start(bot, msg):       
+async def start(bot, msg: message):       
     if FSUB_CHANNEL:
         try:
             # Check if the user is banned
-            user = await Client.get_chat_member(FSUB_CHANNEL, msg.chat.id)
+            user = await bot.get_chat_member(FSUB_CHANNEL, msg.chat.id)
             if user.status == "kicked":
                 await msg.reply_text("Sᴏʀʀʏ, Yᴏᴜ ᴀʀᴇ **B ᴀ ɴ ɴ ᴇ ᴅ**")
                 return

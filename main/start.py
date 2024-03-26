@@ -2,14 +2,39 @@
 import asyncio, time
 from pyrogram import Client, filters, enums
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message
+from pyrogram.errors import UserNotParticipant, UserBannedInChannel
 #from config import ADMIN
-  
+
+START_TEXT = """
+Hᴇʟʟᴏ Mᴀᴡᴀ ❤️ ɪ ᴀᴍ Sɪᴍᴘʟᴇ Rᴇɴᴀᴍᴇ 𝟸𝟺 Bᴏᴛ⚡\n Tʜɪꜱ ʙᴏᴛ ɪꜱ ᴍᴀᴅᴇ ʙʏ <b><a href=https://t.me/Sunrises24botupdates>SUNRISES ™💥</a></b>
+"""
+
 #ALL FILES UPLOADED - CREDITS 🌟 - @Sunrises_24
 #START
-@Client.on_message(filters.command("start") & filters.private)                             
-async def start_cmd(bot, msg):
-    txt=f"Hᴇʏ {msg.from_user.mention} Mᴀᴡᴀ❤️ ɪ ᴀᴍ Sɪᴍᴘʟᴇ Rᴇɴᴀᴍᴇ 𝟸𝟺 Bᴏᴛ⚡\n Tʜɪꜱ ʙᴏᴛ ɪꜱ ᴍᴀᴅᴇ ʙʏ <b><a href=https://t.me/Sunrises24botupdates>SUNRISES ™💥</a></b>"
-    btn = InlineKeyboardMarkup([[
+@Client.on_message(filters.command("start") & filters.private)
+async def start(bot, msg):       
+    if FSUB_CHANNEL:
+        try:
+            # Check if the user is banned
+            user = await client.get_chat_member(FSUB_CHANNEL, message.chat.id)
+            if user.status == "kicked":
+                await message.reply_text("Sᴏʀʀʏ, Yᴏᴜ ᴀʀᴇ **B ᴀ ɴ ɴ ᴇ ᴅ**")
+                return
+        except UserNotParticipant:
+            # If the user is not a participant, prompt them to join
+            await message.reply_text(
+                text="**❤️ Pʟᴇᴀꜱᴇ Jᴏɪɴ Mʏ Uᴘᴅᴀᴛᴇ Cʜᴀɴɴᴇʟ Bᴇғᴏʀᴇ Uꜱɪɴɢ Mᴇ ❤️**",
+                reply_markup=InlineKeyboardMarkup([
+                    [InlineKeyboardButton(text="➕ Jᴏɪɴ Mʏ Uᴘᴅᴀᴛᴇꜱ Cʜᴀɴɴᴇʟ ➕", url=f"https://t.me/{FSUB_CHANNEL}")]
+                ])
+            )
+            return
+        else:
+            # If the user is not banned and is a participant, send the start message
+            start_text = START_TEXT.format(message.from_user.first_name) if hasattr(message, "message_id") else START_TEXT
+            await message.reply_text(
+                text=start_text,
+                reply_markup=InlineKeyboardMarkup([[
         InlineKeyboardButton("Dᴇᴠᴇʟᴏᴘᴇʀ ❤️", url="https://t.me/Sunrises_24")
         ],[
         InlineKeyboardButton("Uᴘᴅᴀᴛᴇs 📢", url="https://t.me/Sunrises24botupdates")
@@ -17,9 +42,7 @@ async def start_cmd(bot, msg):
         InlineKeyboardButton("Hᴇʟᴘ 🌟", callback_data="help"),
         InlineKeyboardButton("Aʙᴏᴜᴛ 🧑🏻‍💻", callback_data="about") 
     ]])
-    if msg.from_user.id:
-        return await msg.reply_text(text=txt, reply_markup=btn, disable_web_page_preview = True)
-    await start(bot, msg, cb=False)
+            return
 
 #ALL FILES UPLOADED - CREDITS 🌟 - @Sunrises_24
 #FUNCTION ABOUT HANDLER

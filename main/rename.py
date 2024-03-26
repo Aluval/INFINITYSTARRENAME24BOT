@@ -16,9 +16,9 @@ async def rename_file(bot, msg):
        await msg.reply_text("Please Reply To An File or video or audio With filename + .extension eg:-(`.mkv` or `.mp4` or `.zip`)")
     og_media = getattr(reply, reply.media.value)
     new_name = msg.text.split(" ", 1)[1]
-    sts = await msg.reply_text("Trying to Downloading.....⚡")
+    sts = await msg.reply_text("🚀Downloading.....⚡")
     c_time = time.time()
-    downloaded = await reply.download(file_name=new_name, progress=progress_message, progress_args=("Download Started...⚡️", sts, c_time)) 
+    downloaded = await reply.download(file_name=new_name, progress=progress_message, progress_args=("🚀Download Started...⚡️", sts, c_time)) 
     filesize = humanbytes(og_media.file_size)                
     if CAPTION:
         try:
@@ -41,10 +41,10 @@ async def rename_file(bot, msg):
             print(e)        
             og_thumbnail = None
         
-    await sts.edit("Trying to Uploading...⚡")
+    await sts.edit("💠Uploading...⚡")
     c_time = time.time()
     try:
-        await bot.send_document(msg.chat.id, document=downloaded, thumb=og_thumbnail, caption=cap, progress=progress_message, progress_args=("Uploade Started.....", sts, c_time))        
+        await bot.send_document(msg.chat.id, document=downloaded, thumb=og_thumbnail, caption=cap, progress=progress_message, progress_args=("💠Upload Started.....", sts, c_time))        
     except Exception as e:  
         return await sts.edit(f"Error {e}")                       
     try:

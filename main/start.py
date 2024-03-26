@@ -36,9 +36,9 @@ async def start(bot, msg: Message):
                 text=start_text,
                 reply_markup=InlineKeyboardMarkup([
                     [InlineKeyboardButton("Dᴇᴠᴇʟᴏᴘᴇʀ ❤️", url="https://t.me/Sunrises_24"),
-                     InlineKeyboardButton("Uᴘᴅᴀᴛᴇs 📢", url="https://t.me/Sunrises24botupdates")]                                   
+                     InlineKeyboardButton("Uᴘᴅᴀᴛᴇs 📢", url="https://t.me/Sunrises24botupdates")],                                  
                     [InlineKeyboardButton("Hᴇʟᴘ 🌟", callback_data="help"),
-                     InlineKeyboardButton("Aʙᴏᴜᴛ 🧑🏻‍💻", callback_data="about")]                   
+                     InlineKeyboardButton("Aʙᴏᴜᴛ 🧑🏻‍💻", callback_data="about")],                   
                     [InlineKeyboardButton("Sᴜᴘᴘᴏʀᴛ ❤️‍🔥", url="https://t.me/Sunrises24botSupport")]]          
                  ),
                  reply_to_message_id=getattr(msg, "message_id", None)

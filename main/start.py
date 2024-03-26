@@ -16,13 +16,13 @@ async def start(bot, msg):
     if FSUB_CHANNEL:
         try:
             # Check if the user is banned
-            user = await Client.get_chat_member(FSUB_CHANNEL, message.chat.id)
+            user = await Client.get_chat_member(FSUB_CHANNEL, msg.chat.id)
             if user.status == "kicked":
-                await message.reply_text("Sᴏʀʀʏ, Yᴏᴜ ᴀʀᴇ **B ᴀ ɴ ɴ ᴇ ᴅ**")
+                await msg.reply_text("Sᴏʀʀʏ, Yᴏᴜ ᴀʀᴇ **B ᴀ ɴ ɴ ᴇ ᴅ**")
                 return
         except UserNotParticipant:
             # If the user is not a participant, prompt them to join
-            await message.reply_text(
+            await msg.reply_text(
                 text="**❤️ Pʟᴇᴀꜱᴇ Jᴏɪɴ Mʏ Uᴘᴅᴀᴛᴇ Cʜᴀɴɴᴇʟ Bᴇғᴏʀᴇ Uꜱɪɴɢ Mᴇ ❤️**",
                 reply_markup=InlineKeyboardMarkup([
                     [InlineKeyboardButton(text="➕ Jᴏɪɴ Mʏ Uᴘᴅᴀᴛᴇꜱ Cʜᴀɴɴᴇʟ ➕", url=f"https://t.me/{FSUB_CHANNEL}")]
@@ -31,8 +31,8 @@ async def start(bot, msg):
             return
         else:
             # If the user is not banned and is a participant, send the start message
-            start_text = START_TEXT.format(message.from_user.first_name) if hasattr(message, "message_id") else START_TEXT
-            await message.reply_text(
+            start_text = START_TEXT.format(msg.from_user.first_name) if hasattr(msg, "message_id") else START_TEXT
+            await msg.reply_text(
                 text=start_text,
                 reply_markup=InlineKeyboardMarkup([
                     [InlineKeyboardButton("Dᴇᴠᴇʟᴏᴘᴇʀ ❤️", url="https://t.me/Sunrises_24")
@@ -43,7 +43,7 @@ async def start(bot, msg):
                     InlineKeyboardButton("Aʙᴏᴜᴛ 🧑🏻‍💻", callback_data="about") 
                     ]]
                 ),
-                reply_to_message_id=getattr(message, "message_id", None)
+                reply_to_message_id=getattr(msg, "message_id", None)
             )
             return            
 

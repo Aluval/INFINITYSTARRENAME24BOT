@@ -12,7 +12,7 @@ Hᴇʟʟᴏ Mᴀᴡᴀ ❤️ ɪ ᴀᴍ Sɪᴍᴘʟᴇ Rᴇɴᴀᴍᴇ 𝟸𝟺 
 #ALL FILES UPLOADED - CREDITS 🌟 - @Sunrises_24
 #START
 @Client.on_message(filters.command("start") & filters.private)
-async def start(bot, msg: message):       
+async def start(bot, msg: Message):       
     if FSUB_CHANNEL:
         try:
             # Check if the user is banned

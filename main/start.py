@@ -48,7 +48,7 @@ async def start(bot, msg: Message):
             return            
 
 #ALL FILES UPLOADED - CREDITS 🌟 - @Sunrises_24
-#FUNCTION ABOUT HANDLER
+#FUNCTION ABOUT HANDLE 
 @Client.on_message(filters.command("about"))
 async def about_command(bot, msg):
     about_text = """
